@@ -1,0 +1,19 @@
+# Core deep learning
+torch
+torchvision
+
+# Data + utilities
+numpy
+pandas
+tqdm
+PyYAML
+Pillow
+
+# Metrics + evaluation
+scikit-learn
+
+# Plotting / figures
+matplotlib
+
+# Grad-CAM overlay / image processing (recommended)
+opencv-python

@@ -1,0 +1,19 @@
+# OS / IDE
+.DS_Store
+.idea/
+
+# Python
+__pycache__/
+.venv/
+
+# Data
+data/raw/
+data/processed/
+
+# Reports & outputs
+reports_archive/
+
+# Model checkpoints
+*.pt
+*.pth
+*.onnx

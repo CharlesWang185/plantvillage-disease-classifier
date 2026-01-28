@@ -1,0 +1,45 @@
+# configs/resnet18.yaml
+
+experiment:
+  name: resnet18_baseline
+  seed: 42
+
+data:
+  dataset: plantvillage
+  split_csv: data/splits/split.csv
+  img_size: 224
+  num_workers: 4
+
+model:
+  name: resnet18
+  num_classes: 15
+  pretrained: true
+  dropout: 0.2
+
+training:
+  batch_size: 32
+  epochs_head: 8         # train classifier head only
+  epochs_finetune: 15    # fine-tune backbone
+  optimizer: adamw
+  lr_head: 0.001
+  lr_finetune: 0.0001
+  weight_decay: 0.0001
+  label_smoothing: 0.0
+  early_stopping_metric: macro_f1
+  early_stopping_patience: 5
+
+scheduler:
+  type: cosine
+  warmup_epochs: 0
+
+freeze:
+  strategy: head_then_last_n
+  unfreeze_last_n_children: 2   # for fine-tuning phase
+
+logging:
+  output_dir: reports
+  save_best: true
+  log_every: 1
+
+device:
+  prefer_mps: true
