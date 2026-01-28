@@ -1,0 +1,25 @@
+{
+  "experiment": "efficientnet_b0_baseline",
+  "device": "mps",
+  "num_classes": 15,
+  "best_metric": "macro_f1",
+  "best_score": 0.7738464833860171,
+  "best_row": {
+    "phase": "finetune",
+    "epoch": 2,
+    "train_loss": 0.3113348874196804,
+    "val_loss": 0.5816398004998841,
+    "val_summary": {
+      "accuracy": 0.8155684754521964,
+      "macro_precision": 0.7939166549112985,
+      "macro_recall": 0.7896323035984304,
+      "macro_f1": 0.7738464833860171,
+      "weighted_f1": 0.8089431729883589
+    },
+    "val_topk": 0.9483204134366925,
+    "lr": 9.567727288213005e-05,
+    "seconds": 78.34031796455383
+  },
+  "best_checkpoint": "/Users/charles/Downloads/plantvillage-disease-classifier/reports/checkpoints/efficientnet_b0_baseline_best.pt",
+  "last_checkpoint": "/Users/charles/Downloads/plantvillage-disease-classifier/reports/checkpoints/efficientnet_b0_baseline_last.pt"
+}

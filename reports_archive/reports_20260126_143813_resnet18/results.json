@@ -1,0 +1,25 @@
+{
+  "experiment": "resnet18_baseline",
+  "device": "mps",
+  "num_classes": 15,
+  "best_metric": "macro_f1",
+  "best_score": 0.869541372219513,
+  "best_row": {
+    "phase": "finetune",
+    "epoch": 3,
+    "train_loss": 0.4683228278364746,
+    "val_loss": 0.3872554276032657,
+    "val_summary": {
+      "accuracy": 0.8830749354005168,
+      "macro_precision": 0.8877061066617334,
+      "macro_recall": 0.8636785788116252,
+      "macro_f1": 0.869541372219513,
+      "weighted_f1": 0.8804183700949412
+    },
+    "val_topk": 0.977390180878553,
+    "lr": 9.045084971874738e-05,
+    "seconds": 74.22226190567017
+  },
+  "best_checkpoint": "/Users/charles/Downloads/plantvillage-disease-classifier/reports/checkpoints/resnet18_baseline_best.pt",
+  "last_checkpoint": "/Users/charles/Downloads/plantvillage-disease-classifier/reports/checkpoints/resnet18_baseline_last.pt"
+}

@@ -11,7 +11,6 @@ data/raw/
 data/processed/
 
 # Reports & outputs
-reports_archive/
 
 # Model checkpoints
 *.pt

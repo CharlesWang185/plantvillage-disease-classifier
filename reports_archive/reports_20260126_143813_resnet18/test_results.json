@@ -1,0 +1,59 @@
+{
+  "config": {
+    "experiment": {
+      "name": "resnet18_baseline",
+      "seed": 42
+    },
+    "data": {
+      "dataset": "plantvillage",
+      "split_csv": "data/splits/split.csv",
+      "img_size": 224,
+      "num_workers": 4
+    },
+    "model": {
+      "name": "resnet18",
+      "num_classes": 15,
+      "pretrained": true,
+      "dropout": 0.2
+    },
+    "training": {
+      "batch_size": 32,
+      "epochs_head": 8,
+      "epochs_finetune": 15,
+      "optimizer": "adamw",
+      "lr_head": 0.001,
+      "lr_finetune": 0.0001,
+      "weight_decay": 0.0001,
+      "label_smoothing": 0.0,
+      "early_stopping_metric": "macro_f1",
+      "early_stopping_patience": 5
+    },
+    "scheduler": {
+      "type": "cosine",
+      "warmup_epochs": 0
+    },
+    "freeze": {
+      "strategy": "head_then_last_n",
+      "unfreeze_last_n_children": 2
+    },
+    "logging": {
+      "output_dir": "reports",
+      "save_best": true,
+      "log_every": 1
+    },
+    "device": {
+      "prefer_mps": true
+    }
+  },
+  "checkpoint": "/Users/charles/Downloads/plantvillage-disease-classifier/reports/checkpoints/resnet18_baseline_best.pt",
+  "split": "test",
+  "test_loss": 0.3725943249633454,
+  "summary": {
+    "accuracy": 0.8853359173126615,
+    "macro_precision": 0.8864233997513232,
+    "macro_recall": 0.8696706712937711,
+    "macro_f1": 0.8706474923565524,
+    "weighted_f1": 0.882310281294641
+  },
+  "topk_accuracy": 0.9828811369509044
+}
