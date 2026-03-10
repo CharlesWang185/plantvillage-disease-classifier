@@ -8,7 +8,7 @@ data:
   dataset: plantvillage
   split_csv: data/splits/split.csv
   img_size: 224
-  num_workers: 4
+  num_workers: 0
 
 model:
   name: efficientnet_b0
